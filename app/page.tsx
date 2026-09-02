@@ -1,57 +1,57 @@
 const features = [
   {
     number: "01",
-    title: "Wi-Fi scanner",
-    text: "See the Wi-Fi networks available around you in a clear, focused local interface.",
+    title: "Scanner Wi-Fi",
+    text: "Consultez localement les informations du réseau Wi-Fi connecté dans une interface claire. La localisation Windows peut être requise.",
   },
   {
     number: "02",
-    title: "Password manager",
-    text: "Update your Windows account password from within the desktop application.",
+    title: "Mot de passe Windows",
+    text: "Gérez les mots de passe des comptes Windows locaux depuis l’application. Les comptes Microsoft restent gérés dans les paramètres Windows.",
   },
   {
     number: "03",
-    title: "Recovery USB",
-    text: "Prepare a recovery USB drive when you need a practical backup path.",
+    title: "Compagnon Recovery",
+    text: "SUPER NOVA RECOVERY est un projet WinPE séparé pour créer, lorsque nécessaire, une clé USB de récupération autorisée.",
   },
 ];
 
 const screenshots = [
-  ["Start_Scan.webp", "SUPER NOVA Wi-Fi scanner start screen"],
-  ["Scan.webp", "SUPER NOVA Wi-Fi scan results"],
-  ["start_Password.webp", "SUPER NOVA password manager start screen"],
-  ["password.webp", "SUPER NOVA password manager"],
+  ["Start_Scan.webp", "Écran de démarrage du scanner Wi-Fi SUPER NOVA"],
+  ["Scan.webp", "Résultats du scan Wi-Fi SUPER NOVA"],
+  ["start_Password.webp", "Écran de démarrage de la gestion des mots de passe SUPER NOVA"],
+  ["password.webp", "Gestion des mots de passe SUPER NOVA"],
 ] as const;
 
 export default function Home() {
   return (
     <main>
-      <nav className="nav" aria-label="Main navigation">
-        <a className="brand" href="#top" aria-label="SUPER NOVA home"><span>✦</span> SUPER NOVA</a>
-        <div className="nav-links"><a href="#features">Features</a><a href="#screens">Screens</a><a href="#requirements">Requirements</a></div>
-        <a className="button button-small" href="/SUPER_NOVA_SETUP.exe" download>Download</a>
+      <nav className="nav" aria-label="Navigation principale">
+        <a className="brand" href="#top" aria-label="Accueil SUPER NOVA"><span>✦</span> SUPER NOVA</a>
+        <div className="nav-links"><a href="#features">Fonctionnalités</a><a href="#screens">Aperçu</a><a href="#requirements">Prérequis</a></div>
+        <a className="button button-small" href="/SUPER_NOVA_SETUP.exe" download>Télécharger</a>
       </nav>
 
       <section id="top" className="hero">
         <div className="hero-content">
-        <p className="eyebrow">WINDOWS DESKTOP UTILITY · LOCAL FIRST</p>
-        <h1>A little more calm<br />for your <em>Windows PC.</em></h1>
-        <p className="hero-copy">SUPER NOVA gathers the practical things you occasionally need—your Wi-Fi information, account settings and a recovery tool—in one familiar desktop application.</p>
+        <p className="eyebrow">UTILITAIRE WINDOWS · LOCAL AVANT TOUT</p>
+        <h1>Un peu plus de sérénité<br />pour votre <em>PC Windows.</em></h1>
+        <p className="hero-copy">SUPER NOVA réunit les outils Windows du quotidien — informations Wi-Fi et paramètres des comptes locaux — dans une application de bureau familière. SUPER NOVA RECOVERY reste un projet compagnon séparé pour les supports de récupération amorçables.</p>
         <div className="hero-actions">
-          <a className="button" href="/SUPER_NOVA_SETUP.exe" download>Download SUPER NOVA <span>↓</span></a>
-          <a className="text-link" href="#features">See what it does <span>→</span></a>
+          <a className="button" href="/SUPER_NOVA_SETUP.exe" download>Télécharger SUPER NOVA <span>↓</span></a>
+          <a className="text-link" href="#features">Découvrir les fonctionnalités <span>→</span></a>
         </div>
-        <p className="offline-note"><span>●</span> Runs locally on Windows — works offline</p>
+        <p className="offline-note"><span>●</span> Fonctionne localement sur Windows — utilisable hors ligne</p>
         </div>
         <div className="product-window" aria-hidden="true">
           <div className="window-bar"><i /><i /><i /><span>SUPER NOVA</span></div>
-          <div className="window-main"><div className="window-symbol">✦</div><p>Good to see you.</p><strong>What would you like to do?</strong><div className="window-actions"><b>Network information</b><b>Account settings</b><b>Recovery utility</b></div></div>
-          <div className="window-footer">Everything stays on this computer <span>●</span></div>
+          <div className="window-main"><div className="window-symbol">✦</div><p>Bienvenue.</p><strong>Que souhaitez-vous faire&nbsp;?</strong><div className="window-actions"><b>Informations réseau</b><b>Paramètres du compte</b><b>Compagnon Recovery</b></div></div>
+          <div className="window-footer">Tout reste sur cet ordinateur <span>●</span></div>
         </div>
       </section>
 
       <section id="features" className="section features">
-        <div className="section-intro"><p className="eyebrow">BUILT FOR THE ESSENTIALS</p><h2>No clutter.<br /><em>Just useful tools.</em></h2></div>
+        <div className="section-intro"><p className="eyebrow">CONÇU POUR L’ESSENTIEL</p><h2>Sans superflu.<br /><em>Juste des outils utiles.</em></h2></div>
         <div className="feature-grid">
           {features.map((feature) => <article className="feature-card" key={feature.number}>
             <span className="feature-number">{feature.number}</span><div className="feature-mark">✦</div><h3>{feature.title}</h3><p>{feature.text}</p>
@@ -60,27 +60,27 @@ export default function Home() {
       </section>
 
       <section id="screens" className="section screenshots">
-        <div className="section-intro"><p className="eyebrow">A CLOSER LOOK</p><h2>Designed for<br /><em>real moments.</em></h2></div>
+        <div className="section-intro"><p className="eyebrow">APERÇU DE L’APPLICATION</p><h2>Pensé pour<br /><em>les vrais besoins.</em></h2></div>
         <div className="shot-grid">
           {screenshots.map(([file, alt]) => <figure key={file} className="shot">
             <img src={`/screenshots/${file}`} alt={alt} />
           </figure>)}
         </div>
-        <p className="asset-note">Add the application captures to <code>public/screenshots/</code> to display them here.</p>
       </section>
 
       <section id="requirements" className="section requirements">
-        <div><p className="eyebrow">SYSTEM REQUIREMENTS</p><h2>Ready when<br /><em>you are.</em></h2></div>
+        <div><p className="eyebrow">PRÉREQUIS SYSTÈME</p><h2>Prêt quand<br /><em>vous l’êtes.</em></h2></div>
         <div className="requirements-card">
-          <div><span>Operating system</span><strong>Windows 10 or Windows 11</strong></div>
-          <div><span>Connection</span><strong>Not required after download</strong></div>
-          <div><span>Installation</span><strong>Local administrator access may be needed</strong></div>
+          <div><span>Système d’exploitation</span><strong>Windows 10 ou Windows 11</strong></div>
+          <div><span>Connexion</span><strong>Non requise après le téléchargement</strong></div>
+          <div><span>Scan Wi-Fi</span><strong>La localisation Windows peut être requise</strong></div>
+          <div><span>Installation</span><strong>Des droits administrateur locaux peuvent être nécessaires pour les comptes</strong></div>
         </div>
       </section>
 
-      <section className="cta"><p className="eyebrow">LOCAL BY DESIGN</p><h2>Keep the essentials<br /><em>close at hand.</em></h2><p>One focused utility, ready whenever you need it.</p><a className="button" href="/SUPER_NOVA_SETUP.exe" download>Download SUPER NOVA <span>↓</span></a></section>
+      <section className="cta"><p className="eyebrow">LOCAL PAR CONCEPTION</p><h2>Gardez l’essentiel<br /><em>à portée de main.</em></h2><p>Un utilitaire ciblé, prêt quand vous en avez besoin.</p><a className="button" href="/SUPER_NOVA_SETUP.exe" download>Télécharger SUPER NOVA <span>↓</span></a></section>
 
-      <footer><a className="brand" href="#top"><span>✦</span> SUPER NOVA</a><p>Local Windows utility. No cloud connection required.</p><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a></footer>
+      <footer><a className="brand" href="#top"><span>✦</span> SUPER NOVA</a><p>Utilitaire Windows local. Aucune connexion cloud requise.</p><a href="https://github.com/Luffy-M-Y/SUPER_NOVA_WebSite" target="_blank" rel="noreferrer">GitHub ↗</a></footer>
     </main>
   );
 }
