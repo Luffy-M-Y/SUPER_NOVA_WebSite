@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <main>
       <nav className="nav" aria-label="Navigation principale">
-        <a className="brand" href="#top" aria-label="Accueil SUPER NOVA"><span>✦</span> SUPER NOVA</a>
+        <a className="brand" href="#top" aria-label="Accueil SUPER NOVA"><img className="brand-icon" src="/SUPER_NOVA.ico" alt="" /> SUPER NOVA</a>
         <div className="nav-links"><a href="#features">Fonctionnalités</a><a href="#screens">Aperçu</a><a href="#requirements">Prérequis</a></div>
         <a className="button button-small" href="/SUPER_NOVA_SETUP.exe" download>Télécharger</a>
       </nav>
@@ -80,7 +80,7 @@ export default function Home() {
 
       <section className="cta"><p className="eyebrow">LOCAL PAR CONCEPTION</p><h2>Gardez l’essentiel<br /><em>à portée de main.</em></h2><p>Un utilitaire ciblé, prêt quand vous en avez besoin.</p><a className="button" href="/SUPER_NOVA_SETUP.exe" download>Télécharger SUPER NOVA <span>↓</span></a></section>
 
-      <footer><a className="brand" href="#top"><span>✦</span> SUPER NOVA</a><p>Utilitaire Windows local. Aucune connexion cloud requise.</p><a href="https://github.com/Luffy-M-Y/SUPER_NOVA_WebSite" target="_blank" rel="noreferrer">GitHub ↗</a></footer>
+      <footer><a className="brand" href="#top"><img className="brand-icon" src="/SUPER_NOVA.ico" alt="" /> SUPER NOVA</a><p>Utilitaire Windows local. Aucune connexion cloud requise.</p><a href="https://github.com/Luffy-M-Y/SUPER_NOVA_WebSite" target="_blank" rel="noreferrer">GitHub ↗</a></footer>
     </main>
   );
 }
